@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense, useMemo } from 'react'
+import { useState, useRef, Suspense, useMemo, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars, Sparkles, Float, ContactShadows, Environment } from '@react-three/drei'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -212,6 +212,32 @@ function Scene({ isOpen }: { isOpen: boolean }) {
 
 export default function App() {
   const [isOpen] = useState(true)
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.5 // pleasant background volume
+      // Try to autoplay on mount
+      audioRef.current.play().then(() => {
+        setIsPlaying(true)
+      }).catch(() => {
+        console.log("Autoplay blocked. User needs to interact first.")
+      })
+    }
+  }, [])
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        audioRef.current.play()
+        setIsPlaying(true)
+      }
+    }
+  }
 
   const container = {
     hidden: { opacity: 0 },
@@ -229,6 +255,18 @@ export default function App() {
   return (
     <div className="w-full h-screen relative bg-gradient-to-br from-violet-400 via-fuchsia-400 to-pink-400 overflow-hidden">
       
+      {/* Hidden Audio Element */}
+      <audio ref={audioRef} src="/birthday.mp3" loop />
+      
+      {/* Floating Music Toggle Button */}
+      <button 
+        onClick={toggleMusic}
+        className="absolute top-4 right-4 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white rounded-full p-3 shadow-lg transition-all"
+        title={isPlaying ? "Pause Music" : "Play Music"}
+      >
+        {isPlaying ? '🎵' : '🔇'}
+      </button>
+
       {/* 3D Canvas Layer */}
       <Canvas shadows camera={{ position: [0, 1, 9], fov: 45 }}>
         <Suspense fallback={null}>
