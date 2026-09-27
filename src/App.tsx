@@ -273,28 +273,11 @@ export default function App() {
 
               <motion.div variants={item} className="w-24 md:w-32 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60 my-1" />
 
-              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
-                <span className="text-pink-300 font-semibold block drop-shadow-[0_0_15px_rgba(244,114,182,0.6)]">Look how far you’ve come.</span>
-                Never lose that beautiful little girl inside you — the one who dreams big, laughs freely, and finds happiness in the smallest things.
-              </motion.p>
-
-              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
-                As you step into this new chapter of your life, I hope you always have the courage to chase what makes you happy, the strength to get through the difficult days, and the wisdom to choose what truly matters.
-              </motion.p>
-
-              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
-                May you create countless beautiful memories, meet people who make your life brighter, and never forget how loved and special you are. ❤️
-              </motion.p>
-
-              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
-                Keep smiling that beautiful smile, keep being the wonderful person you are, and never be afraid to become an even better version of yourself.
+              <motion.p variants={item} className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg font-medium leading-relaxed px-1 sm:px-2 text-justify md:text-center">
+                <span className="text-pink-300 font-semibold drop-shadow-[0_0_15px_rgba(244,114,182,0.6)]">Look how far you’ve come.</span> Never lose that beautiful little girl inside you — the one who dreams big, laughs freely, and finds happiness in the smallest things. As you step into this new chapter of your life, I hope you always have the courage to chase what makes you happy, the strength to get through the difficult days, and the wisdom to choose what truly matters. May you create countless beautiful memories, meet people who make your life brighter, and never forget how loved and special you are. ❤️ Keep smiling that beautiful smile, keep being the wonderful person you are, and never be afraid to become an even better version of yourself. Here’s to 18 years of you and to all the amazing years waiting ahead! 🥂✨
               </motion.p>
 
               <motion.div variants={item} className="w-24 md:w-32 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-60 my-1" />
-
-              <motion.p variants={item} className="text-amber-200 text-sm sm:text-lg md:text-xl font-semibold leading-relaxed drop-shadow-md">
-                Here’s to 18 years of you and to all the amazing years waiting ahead! 🥂✨
-              </motion.p>
 
               <motion.p variants={item} className="text-pink-200 text-xs sm:text-base md:text-lg font-medium leading-relaxed drop-shadow-md">
                 May this year bring you happiness, adventures, love, and everything your heart wishes for. 🌸
