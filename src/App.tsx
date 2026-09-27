@@ -242,61 +242,61 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center p-4 md:p-8 z-10"
+            className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center p-2 sm:p-4 md:p-8 z-10"
           >
             <motion.div
               variants={container}
               initial="hidden"
               animate="show"
-              className="w-full max-w-5xl bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-8 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto flex flex-col items-center gap-3 text-center"
+              className="w-full max-w-5xl max-h-[95vh] overflow-y-auto custom-scrollbar bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto flex flex-col items-center gap-2 sm:gap-3 text-center"
             >
               <motion.h1 
                 variants={item}
-                className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-300 via-purple-300 to-amber-200 bg-clip-text text-transparent drop-shadow-lg mb-1"
+                className="text-2xl sm:text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-300 via-purple-300 to-amber-200 bg-clip-text text-transparent drop-shadow-lg mb-1"
               >
                 Happy Birthday Priyanshi!
               </motion.h1>
 
               <motion.div variants={item} className="w-full relative px-2 md:px-6">
-                <p className="text-white/95 text-lg md:text-xl font-medium leading-relaxed italic drop-shadow-md">
+                <p className="text-white/95 text-sm sm:text-lg md:text-xl font-medium leading-relaxed italic drop-shadow-md">
                   Watching you grow into the person you are today has been such a beautiful journey.
                 </p>
               </motion.div>
 
-              <motion.div variants={item} className="w-32 h-[2px] bg-gradient-to-r from-transparent via-pink-400 to-transparent opacity-60 my-1" />
+              <motion.div variants={item} className="w-24 md:w-32 h-[2px] bg-gradient-to-r from-transparent via-pink-400 to-transparent opacity-60 my-1" />
 
-              <motion.p variants={item} className="text-amber-50 text-base md:text-lg font-medium leading-relaxed drop-shadow-md">
-                <strong className="text-amber-300 text-3xl md:text-4xl font-bold block mb-1 drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">18!</strong>
+              <motion.p variants={item} className="text-amber-50 text-xs sm:text-base md:text-lg font-medium leading-relaxed drop-shadow-md">
+                <strong className="text-amber-300 text-2xl sm:text-3xl md:text-4xl font-bold block mb-1 drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">18!</strong>
                 Officially old enough to make your own decisions… 
                 and young enough to blame your parents when they go wrong. 😉😂
               </motion.p>
 
-              <motion.div variants={item} className="w-32 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60 my-1" />
+              <motion.div variants={item} className="w-24 md:w-32 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60 my-1" />
 
-              <motion.p variants={item} className="text-white/90 text-base md:text-lg font-medium leading-relaxed px-2">
+              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
                 <span className="text-pink-300 font-semibold block drop-shadow-[0_0_15px_rgba(244,114,182,0.6)]">Look how far you’ve come.</span>
                 Never lose that beautiful little girl inside you — the one who dreams big, laughs freely, and finds happiness in the smallest things.
               </motion.p>
 
-              <motion.p variants={item} className="text-white/90 text-base md:text-lg font-medium leading-relaxed px-2">
+              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
                 As you step into this new chapter of your life, I hope you always have the courage to chase what makes you happy, the strength to get through the difficult days, and the wisdom to choose what truly matters.
               </motion.p>
 
-              <motion.p variants={item} className="text-white/90 text-base md:text-lg font-medium leading-relaxed px-2">
+              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
                 May you create countless beautiful memories, meet people who make your life brighter, and never forget how loved and special you are. ❤️
               </motion.p>
 
-              <motion.p variants={item} className="text-white/90 text-base md:text-lg font-medium leading-relaxed px-2">
+              <motion.p variants={item} className="text-white/90 text-xs sm:text-base md:text-lg font-medium leading-relaxed px-1 sm:px-2">
                 Keep smiling that beautiful smile, keep being the wonderful person you are, and never be afraid to become an even better version of yourself.
               </motion.p>
 
-              <motion.div variants={item} className="w-32 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-60 my-1" />
+              <motion.div variants={item} className="w-24 md:w-32 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-60 my-1" />
 
-              <motion.p variants={item} className="text-amber-200 text-lg md:text-xl font-semibold leading-relaxed drop-shadow-md">
+              <motion.p variants={item} className="text-amber-200 text-sm sm:text-lg md:text-xl font-semibold leading-relaxed drop-shadow-md">
                 Here’s to 18 years of you and to all the amazing years waiting ahead! 🥂✨
               </motion.p>
 
-              <motion.p variants={item} className="text-pink-200 text-base md:text-lg font-medium leading-relaxed drop-shadow-md">
+              <motion.p variants={item} className="text-pink-200 text-xs sm:text-base md:text-lg font-medium leading-relaxed drop-shadow-md">
                 May this year bring you happiness, adventures, love, and everything your heart wishes for. 🌸
               </motion.p>
 
